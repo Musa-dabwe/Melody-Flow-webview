@@ -1,0 +1,5 @@
+{
+  "name": "Melody Flow Music",
+  "description": "A sleek, offline-first music player application with a modern interface, playlist management, and customizable audio settings. Built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}

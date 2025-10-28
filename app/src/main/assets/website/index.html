@@ -1,9 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>React Music App</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melody Flow Music</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for a more native feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a4a4a;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5a5a5a;
+      }
+      /* Disable text highlighting */
+      body {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ and Edge */
+        user-select: none; /* Standard syntax */
+      }
+      @keyframes modal-enter {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-modal-enter {
+        animation: modal-enter 0.2s ease-out forwards;
+      }
+      @keyframes toast-in-out {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, 10px);
+        }
+        20% {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+        80% {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-50%, 10px);
+        }
+      }
+      .animate-toast-in-out {
+        animation: toast-in-out 1.5s ease-in-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <h1>Loading React Music App...</h1>
-</body>
+  <body class="bg-black">
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.8/dist/jsmediatags.min.js"></script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
